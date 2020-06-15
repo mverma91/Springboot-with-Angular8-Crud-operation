@@ -1,0 +1,108 @@
+.custab{
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin: 10% 0;
+  box-shadow: 3px 3px 2px #ccc;
+  transition: 0.5s;
+  margin-left: initial;
+  }
+.custab:hover{
+  box-shadow: 3px 3px 0px transparent;
+  transition: 0.5s;
+  }
+
+ 
+
+#custom-search-input {/* Isearch field */
+margin-top: 50px;
+padding: 2px;
+line-height: 12px;
+width: 500px;
+font-size: pt;
+font-family: tahoma;
+margin-right: 50px;
+position:absolute;
+top:0;
+right:0;
+}
+.col-md-12 {
+width: 62%;
+
+}
+#custom-search-input .search-query {
+padding-right: 3px;
+padding-right: 4px \9;
+padding-left: 3px;
+padding-left: 4px \9;
+/* IE7-8 doesn't have border-radius, so don't indent the padding */
+
+margin-bottom: 0;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 43px;
+}
+
+#custom-search-input button {
+border: 0;
+background: none;
+/** belows styles are working good */
+padding: 2px 5px;
+margin-top: 2px;
+position: relative;
+left: -28px;
+/* IE7-8 doesn't have border-radius, so don't indent the padding */
+margin-bottom: 0;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+color:green;
+}
+
+.search-query:focus + button {
+z-index: 3;  
+}
+.input-group {
+position: relative;
+display: table;
+border-collapse: separate;
+padding-right: 50px;
+padding-left: 50px;
+color:blue;
+
+}
+
+body {
+  padding-top:10px;
+  color:green;
+}
+fieldset {/* heart of  form*/
+  border: chocolate; 
+  border-radius: 2px;
+  padding: 50px;
+  padding-left: 50px;
+  background:#002221;
+  width: 120%;
+  margin-left: 35%;
+
+  
+}
+legend {
+ color:#002221;
+ padding-left: 50px;
+ width: 95%;
+ background-image: initial;
+ background-color: rgb(20, 173, 220);
+ animation-play-state: inherit;
+
+}
+.form-control {
+  width: 95%;
+  color:black;
+}
+label small {
+  color:red;
+}
+span.req {
+  color:maroon;
+  font-size: 150%;
+}

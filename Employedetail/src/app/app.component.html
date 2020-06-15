@@ -1,0 +1,95 @@
+<legend class="text-center">Valid information is required to register. <span class="req"><small>
+    required *</small></span></legend>
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+                        
+<div class="container">
+    <div style="text-align:center">
+    <h1>{{message}}</h1>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+    
+               <div id="custom-search-input" >
+                                <div style="text-align:center">
+                                    <input type="text" class="search-query form-control"  placeholder="Search with EmpData"  name="empdata" [(ngModel)]="empdata"/>
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-danger" type="button" (click)="getEmploy()">
+                                            <span class=" glyphicon glyphicon-search"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+    </div>
+    </div>
+
+    <br>
+    <div class="container" >
+     <div class="row">
+    <div class="col-md-6">
+<form [formGroup]='singUpForm' (ngSubmit)="onFormSubmit()">
+<fieldset>
+    <br> <!--i change-->
+<div class="formRealted">
+    <label for="ID"><span class="req">* </span> ID: <small>This will be your login user
+        ID</small> </label>
+<input required type="text" formControlName='ID' placeholder="Please Enter ID" class="form-control phone" maxlength="28" placeholder="Enter your fullname..." />
+</div>
+<div class="formRealted" >
+    <br>
+    <label for="Name"><span class="req">* </span> Name: <small>This will be your login user
+        Name</small> </label>
+<input type="text" formControlName='Name' placeholder="Please Enter Name" class="form-control phone" maxlength="28" placeholder="Enter your fullname..." />
+</div>
+ <div class="formRealted" >
+    <br>
+    <label for="Name"><span class="req">* </span> Salary: <small>This will be your login user
+        Salary</small> </label>
+<input type="text" formControlName='Salary' placeholder="Please Enter Salary" class="form-control phone" maxlength="28" placeholder="Enter your Salary..." />
+</div>
+<div class="formRealted" >
+    <br>
+    <label for="Name"><span class="req">* </span>Department: <small>This will be your login user
+        Department</small> </label>
+<input type="text" formControlName='Department' placeholder="Please Enter Department" class="form-control phone" maxlength="28" placeholder="Enter your Department..." />
+</div>
+<br>
+
+<input class="btn btn-success"  type="submit" value="PostData" >
+
+</fieldset>
+</form>
+</div><!-- ends col-6 -->
+</div>
+</div>
+<div>  
+</div>
+<div class="container">
+    <div class="container">
+        <div class="row col-md-6 col-md-offset-2 custyle">
+        <table class="table table-striped custab">
+        <thead>
+    <tr >
+      <th>Id</th>
+      <th>Name</th>
+      <th>SALARY</th>
+      <th>DEPARTMENT</th>
+      <th class="text centre">Action</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let empValue of emp">
+      <td> {{empValue.ID}}</td>
+      <td>{{empValue.Name}}</td>
+      <td> {{empValue.Salary}}</td>
+      <td> {{empValue.Department}}</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
