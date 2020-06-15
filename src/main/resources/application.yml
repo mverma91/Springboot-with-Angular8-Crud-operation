@@ -1,0 +1,6 @@
+entitymanager.packagesToScan: com
+
+server:
+  port: 8070
+  
+  
